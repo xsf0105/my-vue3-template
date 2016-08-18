@@ -1,5 +1,7 @@
 # Example VUE-SPA 
 - 有问题请联系qq：416175716
+- 将使用ES6/晚饭后到家搞~
+- 欢饮提出建议
 
 ## How to use
 ``` bash
