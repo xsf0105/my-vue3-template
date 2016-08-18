@@ -1,18 +1,28 @@
-## Setup
-``` bash
-npm install
-npm start
-```
-访问 localhost:8080
+# Example VUE-SPA 
+- 有问题请联系qq：416175716
 
-如果想在手机上查看
+## How to use
+``` bash
+$ git clone git@github.com:allan2coder/Vue-SPA.git <yourAppName>
+$ cd <yourAppName>
+$ npm install
+```
+
+launch the project app.
+``` bash
+$ npm start
+```
+
+Then, You should see a new browser tap opening and a page of "index.html" in http://127.0.0.1:8080.
+
+-watch on your mobile
 
 ```
 npm run ip
 ```
 访问 你本地的ip:9000
 
-## 版本控制，打包压缩
+## Release
 MAC
 
 ```
@@ -25,7 +35,7 @@ windows
 npm run wb
 ```
 
-## 目录结构
+## CONSTRUCTION
 <pre>
 │  .gitignore          # 忽略无需git控制的文件  比如 node_modules
 │  package.json        # 项目配置
@@ -54,5 +64,5 @@ npm run wb
 </pre>
 
 ##学习参考：
-待续
+待续...
 
