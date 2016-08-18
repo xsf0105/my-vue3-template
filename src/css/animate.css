@@ -1,0 +1,165 @@
+/*所有的动画*/
+ .slideleft-enter {
+    animation:slideleft-in .3s;
+  }
+  .slideleft-leave {
+    animation:slideleft-out .3s;
+  }
+  .slideright-enter {
+    animation:slideright-in .3s;
+  }
+  .slideright-leave {
+    animation:slideright-out .3s;
+  }
+  .slidetop-enter {
+    animation:slidetop-in .3s;
+  }
+  .slidetop-leave {
+    animation:slidetop-out .3s;
+  }
+  .slidebottom-enter {
+    animation:slidebottom-in .3s;
+  }
+  .slidebottom-leave {
+    animation:slidebottom-out .3s;
+  }
+  @keyframes slideleft-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideleft-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideright-in {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideright-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  @keyframes slidetop-in {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slidetop-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  @keyframes slidebottom-in {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slidebottom-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+
+
+/*切换效果 -- 渐隐*/
+.fadein-enter{
+  animation:fadein-in 0.3s ease;
+}
+.fadein-leave{
+  animation:fadein-out 0.3s ease;
+}
+
+/*切换效果 -- 从右渐入*/
+.fadeInRight-enter {
+  animation:fadeInRight-in 0.3s ease;
+}
+.fadeInRight-leave{
+  animation:fadeInRight-out 0.3s ease;
+}
+
+@keyframes fadein-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInRight-in {
+    0% {
+        opacity: 0;
+        transform: translate3d(2000px,0,0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: none
+    }
+}
+@keyframes fadeInRight-out {
+    0% {
+    	opacity: 1;
+    	transform: none
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(-2000px,0,0)
+    }
+}   
