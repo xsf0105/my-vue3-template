@@ -1,6 +1,6 @@
-<template xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<template>
 	<div class="about">
-		<h2>you're in {{title}} page!</h2>
+		<h2>You're in {{title}} page!</h2>
 		<p>{{content}}</p>
 		<p>
 			<img :src="imageSrc">
