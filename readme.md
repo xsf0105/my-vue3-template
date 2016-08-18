@@ -35,7 +35,7 @@ windows
 npm run wb
 ```
 
-## CONSTRUCTION
+## Construction
 <pre>
 │  .gitignore          # 忽略无需git控制的文件  比如 node_modules
 │  package.json        # 项目配置
