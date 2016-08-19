@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "extract-text-webpack-plugin": "^0.8.2"
+    "extract-text-webpack-plugin": "^0.8.2",
+    "open-browser-webpack-plugin": "^0.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
