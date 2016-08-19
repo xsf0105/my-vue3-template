@@ -1,18 +1,23 @@
 <template>
-<div>
-<!-- div.select_components_mask 类根据堆叠关系 不用设置z-index -->
-<div class="select_components_mask" v-show="show" @click.stop="show=false"></div>
-  <slot name="title">default title</slot>
-   <div class="select" @click.stop="show=!show">
-    <div class="select-content">{{chooseval}}</div>
-    <div class="select_arrow">
-      <span></span>
+    <div>
+        <!-- div.select_components_mask 类根据堆叠关系 不用设置z-index -->
+        <div class="select_components_mask" v-show="show" @click.stop="show=false"></div>
+            <slot name="title">default title</slot>
+
+            <div class="select" @click.stop="show=!show">
+
+                <div class="select-content">{{chooseval}}</div>
+
+                <div class="select_arrow">
+                    <span></span>
+                </div>
+
+                <ul class="select_wrap" :class="{ 'hide': !show }">
+                    <li v-for="d in items" :class="{ 'hover': d.hover }" @mouseout="mouseout(d,$index)" @mouseover="mouseover(d,$index)" @click="choose"> {{ d.text }} </li>
+                </ul>
+
+            </div>
     </div>
-    <ul class="select_wrap" :class="{ 'hide': !show }">
-        <li v-for="d in items" :class="{ 'hover': d.hover }" @mouseout="mouseout(d,$index)" @mouseover="mouseover(d,$index)" @click="choose"> {{ d.text }} </li>
-    </ul>
-  </div>
-</div>
 </template>
 
 <script>
