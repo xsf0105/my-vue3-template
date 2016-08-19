@@ -31,11 +31,12 @@ module.exports = function(router){
 		console.log('before---------------');
 		//可以通过在路由中的自定义字段来验证用户是否需要登陆
 		if(transition.to.auth){
+			alert(1);
 			console.log('通过配置路由中自定义的字段验证是否需要登陆');
 		}
 
-		// //如果是中止，这里可以判断用户登录
-		// //if(transition.to.path === '/forbidden'){
+		 //如果是中止，这里可以判断用户登录
+		 //if(transition.to.path === '/forbidden'){
 		if(transition.to.name == 'forbidden'){
 			router.app.authenticating = true
 			setTimeout(function(){

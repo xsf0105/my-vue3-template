@@ -1,11 +1,10 @@
-
-require('./css/common.css');//加载公共样式
-require('./css/animate.css');//加载公共样式
+//加载公共样式
+require('./css/common.css');
+require('./css/main.css');
+require('./css/animate.css');
 
 var Vue = require('vue');
 var VueRouter = require('vue-router');
-var fastclick = require('fastclick');
-fastclick.attach(document.body);
 
 // register filters 自定义过滤器  金额格式化，
 var filters = require('./filters');

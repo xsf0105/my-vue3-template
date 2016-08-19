@@ -1,45 +1,17 @@
-<style>
-    .fixed-bottom {
-        position: fixed;
-        background: #fff;
-        width: 100%;
-        bottom: 0;
-        z-index: 99;
-        border-top: 1px solid #ccc;
-    }
-    .fixed-bottom div {
-        display: inline-block;
-        float: left;
-        text-align: center;
-    }
-    .fixed-bottom a {
-        width: 100%;
-        display: inline-block;
-        font-size: 12px;
-        color: #7a7a7a;
-        line-height: 50px;
-    }
-</style>
-
 <template>
-  <div class="app">
-      <!--v-text="item.name"-->
-    <!--<footer class="fixed-bottom clearfix">-->
-      <!--<a v-for="item in items" v-link="item" v-text="item.name">{{$index}}</a>-->
-    <!--</footer>-->
+    <div class="app">
 
-      <footer class="fixed-bottom clearfix">
-          <div class="col4" v-for="item in items" v-link="item">
-              <a class="cur" href="" v-text="item.name">{{$index}}</a>
-          </div>
-      </footer>
-
-    <router-view></router-view>
-
-  </div>
+        <router-view></router-view>
+        <button @click="test()">xxxx</button>
+        <footer class="fixed-bottom clearfix">
+            <div class="col4" v-for="item in items" v-link="item">
+                <a class="cur" href="" v-text="item.name">{{$index}}</a>
+            </div>
+        </footer>
+    </div>
 </template>
-<script>
 
+<script>
 module.exports = {
     data: function() {
       return {
@@ -67,7 +39,11 @@ module.exports = {
     created:function(){
 
     },
-    methods:{}
+    methods:{
+        test: function(){
+            console.log(1);
+        }
+    }
 }
 
 </script>

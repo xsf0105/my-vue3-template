@@ -1,5 +1,4 @@
 @charset "utf-8";
-@charset "utf-8";
 
 /*清零*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0;}
@@ -48,10 +47,10 @@ button{
 
 
 @font-face {
-  font-family: "iconfont";
-  src: require('iconfont.woff') format('woff'),
-  require('iconfont.ttf') format('truetype'),
-  require('iconfont.svg#iconfont') format('svg');
+  /*font-family: "iconfont";*/
+  /*src: require('iconfont.woff') format('woff'),*/
+  /*require('iconfont.ttf') format('truetype'),*/
+  /*require('iconfont.svg#iconfont') format('svg');*/
 }
 
 .iconfont {
@@ -66,6 +65,7 @@ button{
   display: none;
 }
 
+/* common css */
 .col2{
   width: 50%;
 }
