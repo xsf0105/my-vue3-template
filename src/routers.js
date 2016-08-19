@@ -21,19 +21,18 @@ module.exports = function(router){
 		},
         '/my_views': {
             name:'my_views',
-            component: require('./views/my_views.vue')
+            component: require('./views/my_views.vue'),
         },
 	});
 
 	window.routeList=[];
 
 	router.beforeEach(function(transition){
-		console.log(11111);
 		console.log('before---------------');
 		//可以通过在路由中的自定义字段来验证用户是否需要登陆
-		// if(transition.to.auth){
-		// 	console.log('通过配置路由中自定义的字段验证是否需要登陆');
-		// }
+		if(transition.to.auth){
+			console.log('通过配置路由中自定义的字段验证是否需要登陆');
+		}
 
 		// //如果是中止，这里可以判断用户登录
 		// //if(transition.to.path === '/forbidden'){
@@ -61,9 +60,9 @@ module.exports = function(router){
 			});
 		}
 
-		setTimeout(function(){
+		// setTimeout(function(){
 			transition.next();
-		},00);
+		// },00);
 	});
 
 	//可以记录访问路径

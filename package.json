@@ -1,5 +1,5 @@
 {
-  "name": "learn-webpack",
+  "name": "vue-spa-webpack",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {

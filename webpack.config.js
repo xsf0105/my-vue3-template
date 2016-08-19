@@ -1,6 +1,9 @@
 //先清空 n-build 文件夹下的文件
-var fs = require('fs'),buildPath='./build/';
+//在nodejs中，可以通过fs（file system）模块进行文件的I/O操作(fs: http://www.2cto.com/kf/201411/351586.html)。
+var fs = require('fs'),
+    buildPath='./build/';
 var folder_exists = fs.existsSync(buildPath);
+
 if(folder_exists == true)
 {
    var dirList = fs.readdirSync(buildPath);
@@ -8,11 +11,13 @@ if(folder_exists == true)
    {
        fs.unlinkSync(buildPath + fileName);
    });
-   console.log("clearing " + buildPath);
+    console.log("先清除build文件!");
+    console.log("clearing " + buildPath);
 };
 
-//readfile
-//先把index.html里面关于style和js的hash值都删除掉，避免在使用 npm run dev 的时候，路径还是压缩后的路劲
+//readfile方法:   进行文件数据的读取
+//writeFile方法:  将数据写入文件到某个文件夹下
+//先把index.html里面关于style和js的hash值都删除掉，避免在使用 npm run dev 的时候，路径还是压缩后的路径
 fs.readFile("index.html",'utf-8',function(err,data){
     if(err){
         console.log("error");
@@ -45,8 +50,8 @@ var production = process.env.PRODUCTION;
 var plugins = [
   //会将所有的样式文件打包成一个单独的style.css
   new ExtractTextPlugin( production ? "style.[hash].css" : "style.css" , {
-    disable: false//,
-    //allChunks: true  //所有独立样式打包成一个css文件
+    disable: false,
+    allChunks: true  //所有独立样式打包成一个css文件
   }),
   //new ExtractTextPlugin("[name].css" )
   //自动分析重用的模块并且打包成单独的文件
@@ -96,7 +101,8 @@ module.exports = {
                 此字段配置如果不正确，发布后资源定位不对，比如：css里面的精灵图路径错误
          */
         publicPath: "/build/",
-        filename: production ? "build.[hash].js" : "build.js"//"build.[hash].js"//[hash]MD5戳   解决html的资源的定位可以使用 webpack提供的HtmlWebpackPlugin插件来解决这个问题  见：http://segmentfault.com/a/1190000003499526 资源路径切换
+        //"build.[hash].js"//[hash]MD5戳   解决html的资源的定位可以使用 webpack提供的HtmlWebpackPlugin插件来解决这个问题  见：http://segmentfault.com/a/1190000003499526 资源路径切换
+        filename: production ? "build.[hash].js" : "build.js"
     },
     module: {
         preLoaders:[
