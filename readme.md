@@ -1,6 +1,6 @@
 # Example VUE-SPA 
-- 有问题请联系qq：416175716
-- 欢迎提出意见和建议!
+- If you have any questions, please contacts by my QQ:416175716！(有问题请联系qq：416175716)
+- Any helpful suggestions would be welcome！（欢迎提出意见和建议!）
 
 ## How to use
 ``` bash
@@ -38,30 +38,30 @@ npm run wb
 
 ## Construction
 <pre>
-│  .gitignore          # 忽略无需git控制的文件  比如 node_modules
-│  package.json        # 项目配置
-│  readme.md           # 项目说明
-│  index.html          # 首页
-│  index.tpl           # 首页模板  在发布的时候 执行 PRODUCTION=1 webpack 会生成一个d.html并注入脚本，样式，达到版本控制的目的
-│  webpack.config.js   # webpack 配置文件
+│──.gitignore          # 忽略无需git控制的文件  比如 node_modules
+│──package.json        # 项目配置
+│──readme.md           # 项目说明
+│──index.html          # 首页
+│──index.tpl           # 首页模板  在发布的时候 执行 PRODUCTION=1 webpack 会生成一个d.html并注入脚本，样式，达到版本控制的目的
+│──webpack.config.js   # webpack 配置文件
 │
 ├─node_modules
 └─src
-    │  app.js          # 启动配置，配置路由，过滤器
-    │  app.vue         # 主vue
-    │  filters.js      # 过滤器
-    │  routers.js      # 路由
+    │──app.js          # 启动配置，配置路由，过滤器
+    │──app.vue         # 主vue
+    │──filters.js      # 过滤器
+    │──routers.js      # 路由
     │
     ├─components       # 组件
-    │      my-component.vue
+    │     │──my-component.vue
     │
     ├─css              # 公用样式
-    │      common.css
+    │     │──common.css
     │
     └─views            # 页面
-            about.vue
-            home.vue
-            not-found.vue
+            ──about.vue
+            ──home.vue
+            ──not-found.vue
 </pre>
 
 ##学习参考：
