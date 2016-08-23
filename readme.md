@@ -2,7 +2,7 @@
 - If you have any questions, please contacts by my QQ:416175716！(有问题请联系qq：416175716)
 - Any helpful suggestions would be welcome！（欢迎提出意见和建议!）
 
-![image](https://github.com/allan2coder/Vue-SPA/blob/master/src/images/logo.gif)
+![image](https://github.com/allan2coder/Vue-SPA/blob/master/src/images/1.gif)
 
 ## How to use
 ``` bash
