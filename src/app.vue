@@ -1,10 +1,6 @@
 <template>
     <div class="app">
-
         <router-view></router-view>
-
-        <button @click="test()">test button!</button>
-
         <footer class="fixed-bottom clearfix">
             <div class="col4" v-for="item in items" v-link="item">
                 <a class="cur" href="" v-text="item.name">{{$index}}</a>
@@ -41,9 +37,6 @@ module.exports = {
 
     },
     methods:{
-        test: function(){
-            console.log(1);
-        }
     }
 }
 

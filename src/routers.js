@@ -31,7 +31,7 @@ module.exports = function(router){
 		console.log('before---------------');
 		//可以通过在路由中的自定义字段来验证用户是否需要登陆
 		if(transition.to.auth){
-			alert(1);
+			//alert(1);
 			console.log('通过配置路由中自定义的字段验证是否需要登陆');
 		}
 
