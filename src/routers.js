@@ -23,17 +23,30 @@ module.exports = function(router){
             name:'my_views',
             component: require('./views/my_views.vue'),
         },
+        '/login': {
+            name:'login',
+            component: require('./views/login.vue'),
+        },
 	});
 
 	window.routeList=[];
 
 	router.beforeEach(function(transition){
 		console.log('before---------------');
+
 		//可以通过在路由中的自定义字段来验证用户是否需要登陆
+		// console.log('通过配置路由中自定义的字段验证是否需要登陆');
 		if(transition.to.auth){
-			//alert(1);
-			console.log('通过配置路由中自定义的字段验证是否需要登陆');
+			if(localStorage.userId) {
+				transition.next();
+			} else {
+				var redirect = encodeURIComponent(transition.to.path);
+            	transition.redirect('/login?redirect=' + redirect);
+			}
+		} else {
+			transition.next();
 		}
+
 
 		 //如果是中止，这里可以判断用户登录
 		 //if(transition.to.path === '/forbidden'){
@@ -62,7 +75,7 @@ module.exports = function(router){
 		}
 
 		// setTimeout(function(){
-			transition.next();
+			// transition.next();
 		// },00);
 	});
 

@@ -8,7 +8,8 @@ const VueRouter = require('vue-router');
 const filters = require('./common/filters');// register filters 自定义过滤器
 
 const _config = require('./common/config');// API接口 可以在需要的页面引入,此页面可以不引入!
-console.log(_config.SERVICE.EDU.DETAILS);
+
+//console.log(_config.SERVICE.EDU.DETAILS);
 
 //Object.keys(filters).forEach(function(k) {
 //  Vue.filter(k, filters[k]);
@@ -16,6 +17,7 @@ console.log(_config.SERVICE.EDU.DETAILS);
 
 var App = Vue.extend(require('./app.vue'));
     Vue.use(VueRouter);
+    
 var router = new VueRouter(
 	{
 	  hashbang: true,  //为true的时候 example.com/#!/foo/bar ， false的时候 example.com/#/foo/bar
