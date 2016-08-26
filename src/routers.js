@@ -29,6 +29,7 @@ module.exports = function(router){
         },
 	});
 
+
 	window.routeList=[];
 
 	router.beforeEach(function(transition){
@@ -46,6 +47,7 @@ module.exports = function(router){
 		} else {
 			transition.next();
 		}
+
 
 
 		 //如果是中止，这里可以判断用户登录
