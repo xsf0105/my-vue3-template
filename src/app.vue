@@ -10,34 +10,31 @@
 </template>
 
 <script>
-module.exports = {
-    data: function() {
-        return {
-            items:{
-                '/':{
-                    name:'index'
-                },
-                '/news': {
-                    name:'news'
-                },
-                '/search/:viewId': {
-                    name:'search'
-                },
-                '/about':{
-                    name:'about'
+    import 'mint-ui/lib/style.css';
+
+    module.exports = {
+        data: function() {
+            return {
+                items:{
+                    '/':{
+                        name:'index'
+                    },
+                    '/news': {
+                        name:'news'
+                    },
+                    '/search/:viewId': {
+                        name:'search'
+                    },
+                    '/about':{
+                        name:'about'
+                    }
                 }
-            }
 
-        };
-    },
-    components:{
-//      modal:require('./components/modal.vue'),
-    },
-    created:function(){
-
-    },
-    methods:{
+            };
+        },
+        methods:{
+            /* do someThing */
+        }
     }
-}
 
 </script>

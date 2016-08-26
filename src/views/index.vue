@@ -14,9 +14,6 @@
 	<div class="index">
 		<h2>vue-router 介绍:</h2>
 		<a class="router-link" href="http://router.vuejs.org/zh-cn/" target="_blank">点击这里</a>
-
-		<mt-cell title="标题文字"></mt-cell>
-		<mt-cell title="标题文字" value="说明文字"></mt-cell>
 	</div>
 </template>
 
@@ -24,8 +21,7 @@
 	var lifecycle = []; //为了描述生命周期， 在 canActivate 阶段 还没有 this.lifecycle
 
 	import Vue from 'vue'
-	import { Cell } from 'mint-ui';
-	Vue.component(Cell.name, Cell);
+	import { Toast } from 'mint-ui';
 
 	module.exports = {
 		//props: ['父组建传的值'],
@@ -41,7 +37,7 @@
 			//waitForData: true, //数据加载完毕后再切换试图，也就是 点击之后先没反应，然后数据加载完，再出发过渡效果
 			canActivate:function(transition){
 				//canActivate阶段，可以做一些用户验证的事情
-				console.log(1);
+                Toast('Test toast');
 				return true;
 			},
 			activate:function(transition){

@@ -49,6 +49,7 @@
 </script>
 
 <style>
+
     .select_components_mask{
       position: fixed;
       left: 0;
