@@ -14,12 +14,18 @@
 	<div class="index">
 		<h2>vue-router 介绍:</h2>
 		<a class="router-link" href="http://router.vuejs.org/zh-cn/" target="_blank">点击这里</a>
+
+		<mt-cell title="标题文字"></mt-cell>
+		<mt-cell title="标题文字" value="说明文字"></mt-cell>
 	</div>
 </template>
 
 <script>
-
 	var lifecycle = []; //为了描述生命周期， 在 canActivate 阶段 还没有 this.lifecycle
+
+	import Vue from 'vue'
+	import { Cell } from 'mint-ui';
+	Vue.component(Cell.name, Cell);
 
 	module.exports = {
 		//props: ['父组建传的值'],
@@ -35,13 +41,13 @@
 			//waitForData: true, //数据加载完毕后再切换试图，也就是 点击之后先没反应，然后数据加载完，再出发过渡效果
 			canActivate:function(transition){
 				//canActivate阶段，可以做一些用户验证的事情
-				lifecycle.push("route.canActivate <a href='http://vuejs.github.io/vue-router/zh-cn/pipeline/can-activate.html'>在验证阶段，当一个组件将要被切入的时候被调用。</a>");
+				console.log(1);
 				return true;
 			},
 			activate:function(transition){
 				//console.log('active');
 				this.lifecycle.push("route.activate <a href='http://vuejs.github.io/vue-router/zh-cn/pipeline/data.html'>在激活阶段被调用，在 activate 被断定（ resolved ，指该函数返回的 promise 被 resolve ）。用于加载和设置当前组件的数据。</a>");
-//				this.$root.$set('header',this.title);
+				//this.$root.$set('header',this.title);
 
 				transition.next();
 				//此方法结束后，api会调用afterActivate 方法
