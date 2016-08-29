@@ -5,7 +5,7 @@
   "dependencies": {
     "extract-text-webpack-plugin": "^0.8.2",
     "mint-ui": "^0.2.7",
-    "open-browser-webpack-plugin": "^0.0.2",
+    "open-browser-webpack-plugin": "^0.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",
