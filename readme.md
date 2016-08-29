@@ -6,7 +6,7 @@
 
 ## How to use
 ``` bash
-$ git clone git@github.com:allan2coder/Vue-SPA.git <yourAppName>
+$ git clone https://github.com/allan2coder/Vue-SPA.git <yourAppName>
 $ cd <yourAppName>
 $ npm install
 ```
