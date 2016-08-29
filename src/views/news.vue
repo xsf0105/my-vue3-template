@@ -18,7 +18,7 @@
 			}
 		},
 		components:{
-			uiselect:require('../components/select.vue')
+			uiselect: require('../components/select.vue')
 		},
 		route:{
 			activate:function(transition){
