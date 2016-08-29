@@ -1,12 +1,12 @@
 # Example VUE-SPA 
-- If you have any questions, please contacts by my QQ:416175716！(有问题请联系qq：416175716)
+- If you have any questions, please contacts by my QQ群:424073859
 - Any helpful suggestions would be welcome！（欢迎提出意见和建议!）
 
 ![image](https://github.com/allan2coder/Vue-SPA/blob/master/src/images/1.gif)
 
 ## How to use
 ``` bash
-$ git clone git@github.com:allan2coder/Vue-SPA.git <yourAppName>
+$ git clone https://github.com/allan2coder/Vue-SPA.git <yourAppName>
 $ cd <yourAppName>
 $ npm install
 ```
