@@ -1,7 +1,8 @@
 # Example VUE-SPA 
 - If you have any questions, please contacts by my QQ群:424073859
 - Any helpful suggestions would be welcome！（欢迎提出意见和建议！如有帮助，欢迎star！）
-- Other SPA:    reactjs: https://github.com/allan2coder/React-SPA
+- Reactjs: https://github.com/allan2coder/React-SPA-Tutorial 
+- Angularjs(2.x): https://github.com/allan2coder/angular2-SPA
 
 ![image](https://github.com/allan2coder/Vue-SPA/blob/master/src/images/1.gif)
 
