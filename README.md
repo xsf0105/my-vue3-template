@@ -16,7 +16,7 @@ npm run build
 ```
 
 ## Lifecycle
-![image](https://github.com/allan2coder/Vue2-SPA2/blob/master/screenShot/lifecycle.png)
+![image](https://github.com/allan2coder/VUE2-SPA-Tutorial/blob/master/screenShot/lifecycle.png)
 
 ``` bash
 <template>
