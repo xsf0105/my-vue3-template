@@ -14,7 +14,7 @@ a{ text-decoration:none; outline: none;}
 a:hover{ text-decoration: none; }
 a:active, a:focus{ outline:none; }
 b{ font-weight: normal; }
-input ,button{ border: none; outline: none;}
+/*input ,button{ border: none; outline: none;}*/
 input:not([type="radio"]){appearance:none;-webkit-appearance:none;-o-appearance:none;-moz-appearance:none;}
 button:active{
   transform:scale(0.9);
@@ -45,20 +45,11 @@ button{
   background: none;
 }
 
-
-@font-face {
-  /*font-family: "iconfont";*/
-  /*src: require('iconfont.woff') format('woff'),*/
-  /*require('iconfont.ttf') format('truetype'),*/
-  /*require('iconfont.svg#iconfont') format('svg');*/
+.text-center{
+  text-align: center;
 }
-
-.iconfont {
-  font-family:"iconfont" !important;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+.container{
+  padding: 0 10px;
 }
 
 [v-cloak] {

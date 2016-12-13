@@ -10,7 +10,7 @@
           <router-link to="/second">menu3</router-link>
         </div>
         <div class="col4">
-          <router-link to="/second">menu4</router-link>
+          <router-link to="/third">menu4</router-link>
         </div>
     </footer>
 </template>

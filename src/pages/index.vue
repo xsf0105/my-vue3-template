@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="container">
         <h1>{{msg}}</h1>
-        <button v-on:click="fn2()">点我看控制台</button>
+        <button v-on:click="fn1()">点我看控制台</button>
     </div>
 </template>
 <script>
@@ -33,31 +33,23 @@
             fn1: function(){
                 console.log("这是点击事件!");
             },
-            fn2: function(){
-                console.log("点击事件2");
-            }
+            // fn2: function(){
+            //     console.log("点击事件2");
+            // }
         }
     }
 </script>
 
 <style>
   h1{
-      font-size: 30px;
-      text-align: center;
-  }
-  h4{
-    font-size: 20px;
-    text-align: center;
-  }
-  p,spa{
-      font-size: 16px;
-      text-align: center;
+    font-size: 22px;
+    margin-bottom: 60px;
+    font-weight: 400;
   }
   button{
-      background: orange;
-      display: block;
-      margin: 80px auto;
-      color: #fff;
-      line-height: 30px;
+    display: block;
+    margin: 0 auto;
+    line-height: 30px;
+    /*margin: 60px auto;*/
   }
 </style>
