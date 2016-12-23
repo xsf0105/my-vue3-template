@@ -97,16 +97,19 @@ const app = new Vue({
 ```
 before：
 assetsPublicPath: '/', 
-
+```
+```
 after:
 assetsPublicPath: '/wx/otherPath/static', 
 ```
 
 > 2、在写静态资源的时候最好使用相对路径，如：
+
 ```
 error:
 background: url(../assets/img/icon.png);
-
+```
+```
 right:
 background: url(./../assets/img/icon.png);
 ```
