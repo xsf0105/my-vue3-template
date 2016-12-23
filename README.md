@@ -15,7 +15,7 @@ npm start
 npm run build
 ```
 
-## [Lifecycle 点击进入我的博客](http://www.jianshu.com/p/e9f884b6ba6c)
+## [Lifecycle 点击进入我的博客详细介绍](http://www.jianshu.com/p/e9f884b6ba6c)
 ![image](https://raw.githubusercontent.com/allan2coder/VUE2-SPA-Tutorial/master/screenShot/lifecycle.png)
 
 
