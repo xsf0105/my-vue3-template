@@ -16,7 +16,7 @@ npm run build
 ```
 
 ## [Lifecycle 点击进入我的博客](http://www.jianshu.com/p/e9f884b6ba6c)
-![image](https://github.com/allan2coder/VUE2-SPA-Tutorial/blob/master/screenShot/lifeCycle.png)
+![image](https://raw.githubusercontent.com/allan2coder/VUE2-SPA-Tutorial/master/screenShot/lifecycle.png)
 
 
 ## Router
