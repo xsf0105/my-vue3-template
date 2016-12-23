@@ -90,6 +90,27 @@ const app = new Vue({
 // 现在，应用已经启动了！
 ```
 
+# 实际应用中需要注意的地方：
+
+> 1、生成环境下若项目不是放在服务器的根目录下会访问不到静态资源，此时，你只需要修改下config文件夹内index.js的build中的assetsPublicPath即可
+
+```
+before：
+assetsPublicPath: '/', 
+
+after:
+assetsPublicPath: '/wx/otherPath/static', 
+```
+
+> 2、在写静态资源的时候最好使用相对路径，如：
+```
+error:
+background: url(../assets/img/icon.png);
+
+right:
+background: url(./../assets/img/icon.png);
+```
+
 # Reference Articles
 * [Vue-Router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
 * [ECMAScript 6入门](http://es6.ruanyifeng.com/)
