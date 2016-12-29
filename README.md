@@ -90,9 +90,9 @@ const app = new Vue({
 // 现在，应用已经启动了！
 ```
 
-### 生成环境要注意的地方：
+### 生产环境要注意的地方：
 
-> 1、生成环境下若项目不是放在服务器的根目录下会访问不到静态资源，此时，你只需要修改下config文件夹内index.js的build中的assetsPublicPath即可
+> 1、生产环境下若项目不是放在服务器的根目录下会访问不到静态资源，此时，你只需要修改下config文件夹内index.js的build中的assetsPublicPath即可
 
 ```
 before：
