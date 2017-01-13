@@ -3,7 +3,6 @@
 > A Vue.js project width axios/vue-router/webpack
 
 ### Other SPA(其他单页)
-- [vue2.x](https://github.com/allan2coder/VUE2-SPA-Tutorial)
 - [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
 - [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
 
