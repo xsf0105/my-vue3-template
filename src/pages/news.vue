@@ -1,6 +1,5 @@
 <template>
   <h4 class="news-tit">啥玩意儿？</h4>
-  {{lifecycle}}
 </template>
 
 <style>
