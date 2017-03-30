@@ -1,6 +1,6 @@
 # Vue2-SPA
 
-> A Vue.js project width axios/vue-router/webpack
+> A Vue.js project with axios/vue-router/webpack
 
 ### Other SPA(其他单页)
 - [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
