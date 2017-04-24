@@ -14,7 +14,6 @@
   </div>
 </template>
 <script>
-    import './css/common.css'
     import HeaderCompontent from './components/header.vue'
     import FootComponent from './components/footer.vue'
     export default{

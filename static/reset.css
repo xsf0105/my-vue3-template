@@ -14,7 +14,6 @@ a{ text-decoration:none; outline: none;}
 a:hover{ text-decoration: none; }
 a:active, a:focus{ outline:none; }
 b{ font-weight: normal; }
-/*input ,button{ border: none; outline: none;}*/
 input:not([type="radio"]){appearance:none;-webkit-appearance:none;-o-appearance:none;-moz-appearance:none;}
 button:active{
   transform:scale(0.9);
