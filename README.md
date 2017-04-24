@@ -2,6 +2,11 @@
 
 > A Vue.js project with axios/vue-router/webpack
 
+## Demo
+
+The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/)
+
+
 ### Other SPA(其他单页)
 - [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
 - [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
