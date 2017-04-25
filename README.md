@@ -11,17 +11,25 @@ The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/]
 - [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
 - [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
 
+## How to use
+You should clone the repo and install the dependencies, and then npm start.That is all.
 
-## Build Setup
+```bash
+$ git clone https://github.com/allan2coder/VUE2-SPA-Tutorial.git
+$ cd VUE2-SPA-Tutorial
+$ npm install
+```
+Then launch the project app.
+
+```bash
+$ npm start
+```
+
+You should see a new browser tap opening and a page of 'index.html' in http://localhost:8080.
+
+## How to build the static files
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm start
-
-# build for production with minification
 npm run build
 ```
 
