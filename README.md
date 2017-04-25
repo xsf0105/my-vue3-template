@@ -4,7 +4,7 @@
 
 
 ## Live Demo
-The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端)
+The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端，请将浏览器调到手机屏幕浏览)
 
 
 ## How to use
