@@ -7,10 +7,6 @@
 The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端)
 
 
-## Other SPA(其他单页)
-- [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
-- [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
-
 ## How to use
 You should clone the repo and install the dependencies, and then npm start.That is all.
 
@@ -131,6 +127,12 @@ background: url(../assets/img/icon.png);
 right:
 background: url(./../assets/img/icon.png);
 ```
+
+
+## Other SPA(其他单页)
+- [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
+- [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
+
 
 # Reference Articles
 * [Vue-Router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
