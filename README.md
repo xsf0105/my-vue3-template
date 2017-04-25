@@ -3,7 +3,7 @@
 > A Vue.js project with axios/vue-router/webpack
 
 
-## Online Demo
+## Live Demo
 The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端)
 
 
