@@ -12,7 +12,7 @@ import secondcomponent from '../pages/otherPages.vue'
 import thirdcomponent from '../pages/otherPages2.vue'
 
 export default new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: __dirname,
   routes: [
     {
