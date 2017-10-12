@@ -129,7 +129,7 @@ background: url(./../assets/img/icon.png);
 
 
 ## Other SPA(其他单页)
-- [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
+- [React.js 2.x](https://github.com/allan2coder/React-SPA) :fire: :fire: :fire:
 - [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
 
 
