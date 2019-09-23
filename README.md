@@ -28,8 +28,8 @@ You should see a new browser tap opening and a page of 'index.html' in http://lo
 npm run build
 ```
 
-## [Lifecycle](http://www.jianshu.com/p/e9f884b6ba6c)
-![image](https://raw.githubusercontent.com/allan2coder/VUE2-SPA-Tutorial/master/screenShot/lifecycle.png)
+## [Lifecycle](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
+![image](https://cn.vuejs.org/images/lifecycle.png)
 
 
 ## Router
