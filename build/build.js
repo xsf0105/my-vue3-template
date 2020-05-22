@@ -1,36 +1,22 @@
-// https://github.com/shelljs/shelljs
-require('./check-versions')()
-require('shelljs/global')
-env.NODE_ENV = 'production'
+/*
+ * @Description: 
+ * @Autor: shunfa.xu
+ * @Date: 2020-05-21 15:55:54
+ * @LastEditors: shunfa.xu
+ * @LastEditTime: 2020-05-22 15:07:20
+ */ 
+const webpack = require('webpack');
+const config = require('./webpack.prod.conf');
 
-var path = require('path')
-var config = require('../config')
-var ora = require('ora')
-var webpack = require('webpack')
-var webpackConfig = require('./webpack.prod.conf')
-
-console.log(
-  '  Tip:\n' +
-  '  Built files are meant to be served over an HTTP server.\n' +
-  '  Opening index.html over file:// won\'t work.\n'
-)
-
-var spinner = ora('building for production...')
-spinner.start()
-
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
-rm('-rf', assetsPath)
-mkdir('-p', assetsPath)
-cp('-R', 'static/*', assetsPath)
-
-webpack(webpackConfig, function (err, stats) {
-  spinner.stop()
-  if (err) throw err
-  process.stdout.write(stats.toString({
-    colors: true,
-    modules: false,
-    children: false,
-    chunks: false,
-    chunkModules: false
-  }) + '\n')
-})
+webpack(config, (err, stats) => {
+  if (err || stats.hasErrors()) {
+    // 在这里处理错误
+    console.error(err);
+    return;
+  }
+  // 处理完成
+  console.log(stats.toString({
+    chunks: false,  // 使构建过程更静默无输出
+    colors: true    // 在控制台展示颜色
+  }));
+});
