@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const path = require('path');
 const baseConfig = require('./webpack.base.conf');
 module.exports = merge(baseConfig, {
@@ -9,7 +9,12 @@ module.exports = merge(baseConfig, {
     rules: []
   },
   plugins: [
-    new CleanWebpackPlugin(['dist/'], {
+    // new CleanWebpackPlugin(['dist/'], {
+    //   root: path.resolve(__dirname, '../'),
+    //   verbose: true,
+    //   dry: false
+    // }),
+    new CleanWebpackPlugin({
       root: path.resolve(__dirname, '../'),
       verbose: true,
       dry: false
