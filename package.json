@@ -1,8 +1,13 @@
 {
   "name": "vue2-spa-tutorial",
   "version": "1.0.0",
+  "author": "Allan",
   "description": "最干净的脚手架",
   "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "build": "node build/build.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -16,10 +21,6 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/allan2coder/VUE2-SPA-Tutorial.git"
@@ -29,10 +30,5 @@
     "vue2",
     "vue3"
   ],
-  "author": "Allan",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/allan2coder/VUE2-SPA-Tutorial/issues"
-  },
-  "homepage": "https://github.com/allan2coder/VUE2-SPA-Tutorial#readme"
+  "license": "ISC"
 }
