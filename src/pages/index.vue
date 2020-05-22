@@ -50,6 +50,7 @@ a {
 }
 ul {
 	margin-bottom: 60px;
+	padding: 20px;
 }
 li {
 	line-height: 32px;
