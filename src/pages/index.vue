@@ -1,94 +1,69 @@
 <template>
-    <div>
-        <button v-on:click="loadMore">click me</button>
-        <div>
-            <ul>
-                <li v-for="(item, index) in listArr">
-                    <a href="https://github.com/allan2coder/VUE2-SPA-Tutorial">{{index}} 《{{item.name}}》</a>
-                </li>
-            </ul>
-        </div>
-        <div class="loading" v-if="loading">
-          Loading...
-        </div>
-    </div>
+  <div>
+    <button v-on:click="loadMore">click me</button>
+	<ul>
+		<li v-for="(item, index) in listArr" :key="index">
+			<a href="">{{ index }} 《{{ item.name }}》</a>
+		</li>
+	</ul>
+  </div>
 </template>
 <script>
-    // ajax 使用官方推荐的 axios
-    import axios from 'axios'
+let mock = require('../mock'); // 模拟请求
 
-    export default{
-        data () {
-            return{
-                loading: false,
-                listArr: [],
-            }
-        },
-        created () {
-            this.loadList();
-        },
-        methods: {
-            loadList: function() {
-                console.log("初始化加载数据开始...");
-                var _this = this;
-                _this.loading = true;
-                axios.get('https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery', {
-                  params: {
-                    
-                  }
-                })
-                .then(function (response) {
-                  _this.loading = false;
-                  _this.listArr = response.data.items;
-                  console.log(_this.listArr,"加载完成");
-                })
-                .catch(function (error) {
-                  console.log(error);
-                });
-            },
-            loadMore: function(){
-                console.log("load more")
-                var _this = this;
-                _this.loading = true;
-                axios.get('https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery', {
-                  params: {
-                    
-                  }
-                })
-                .then(function (response) {
-                  _this.loading = false;
-                  _this.listArr = _this.listArr.concat(response.data.items);
-                })
-            }
-        }
-    }
+export default {
+	data: () => ({
+		listArr: [],
+		page: 1,
+	}),
+	created() {
+		this.loadList();
+	},
+	methods: {
+		loadList(page) {
+			const {data, success} = mock.data;
+			if (this.page > 1) {
+				console.log("page is:", this.page);
+				return this.listArr = this.listArr.concat(data);
+			}
+			this.listArr = data;
+		},
+		loadMore() {
+			this.loadList(this.page++);
+		},
+	},
+};
 </script>
 
 <style>
-  button{
-    display: block;
-    margin: 0 auto;
-    line-height: 30px;
-    border: 1px solid #ddd;
-    color: #41b883;
-  }
-  a{
-    color: #35495e;
-    font-size: 16px;
-  }
-  ul{
-    margin-bottom: 60px;
-  }
-  li{
-    line-height: 32px;
-    border-bottom: 1px solid #ddd;
-    padding: 0 10px;
-  }
-  b{
-    font-size: 12px;
-    color: #35495e;
-  }
-  .loading{
-    text-align: center;
-  }
+button {
+	display: block;
+	margin: 0 auto;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	color: #41b883;
+}
+a {
+	color: #35495e;
+	font-size: 16px;
+	text-decoration: none;
+}
+ul {
+	margin-bottom: 60px;
+	padding: 20px;
+}
+li {
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+	padding: 0 10px;
+	text-align: left;
+	list-style: none;
+}
+b {
+	font-size: 12px;
+	color: #35495e;
+}
+.loading {
+  	text-align: center;
+}
 </style>

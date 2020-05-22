@@ -4,9 +4,6 @@
           <router-link to="/index">index</router-link>
         </div>
         <div class="col4">
-          <router-link to="/news">news</router-link>
-        </div>
-        <div class="col4">
           <router-link to="/second">menu3</router-link>
         </div>
         <div class="col4">
@@ -31,11 +28,9 @@
         bottom: 0;
         z-index: 99;
         border-top: 1px solid #ccc;
-    }
-    .fixed-bottom div {
-        display: inline-block;
-        float: left;
+        display: grid;
         text-align: center;
+        grid-template-columns: 33% 33% 33%;
     }
     .fixed-bottom a {
         width: 100%;
