@@ -1,6 +1,6 @@
 # Vue2-SPA
 
-> 可能是全网最干净的 `vue` 仓库
+> 可能是全网最干净的 `vue` 脚手架
 
 > A Vue.js project with axios/vue-router/webpack
 
