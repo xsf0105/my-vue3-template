@@ -1,10 +1,10 @@
 <template>
     <div>
-        <!-- 可以删掉 顶部 -->
+        <!-- 删除试试 顶部 -->
         <HeaderCompontent></HeaderCompontent>
         <!-- 渲染出口 -->
         <router-view></router-view>
-        <!-- 可以删除 底部菜单 -->
+        <!-- 删除试试 底部菜单 -->
         <FootComponent></FootComponent>
     </div>
 </template>

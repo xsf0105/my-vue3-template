@@ -1,44 +1,37 @@
 <template>
   <div>
     <button v-on:click="loadMore">click me</button>
-    <div>
-      <ul>
-        <li v-for="(item, index) in listArr" :key="index">
-          <a href="">{{ index }} 《{{ item.name }}》</a>
-        </li>
-      </ul>
-    </div>
-    <div class="loading" v-if="loading">
-      Loading...
-    </div>
+	<ul>
+		<li v-for="(item, index) in listArr" :key="index">
+			<a href="">{{ index }} 《{{ item.name }}》</a>
+		</li>
+	</ul>
   </div>
 </template>
 <script>
+let mock = require('../mock'); // 模拟请求
+
 export default {
-  data: () => ({
-	loading: false,
-	listArr: [],
-  }),
-  created() {
-    this.loadList();
-  },
-  methods: {
-    loadList() {
-		let url = "https://api.github.com/search/code?q=addClass+in:file+language:js+repo:jquery/jquery";
-		fetch(url, {
-			method: "GET",
-		}).then((res) => {
-			const {data}  = res;
-			console.log(res);
-			this.listArr = data.items;
-        })
-        .catch();
-    },
-    loadMore() {
-		console.log("load more");
+	data: () => ({
+		listArr: [],
+		page: 1,
+	}),
+	created() {
 		this.loadList();
-    },
-  },
+	},
+	methods: {
+		loadList(page) {
+			const {data, success} = mock.data;
+			if (this.page > 1) {
+				console.log("page is:", this.page);
+				return this.listArr = this.listArr.concat(data);
+			}
+			this.listArr = data;
+		},
+		loadMore() {
+			this.loadList(this.page++);
+		},
+	},
 };
 </script>
 
