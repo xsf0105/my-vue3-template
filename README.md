@@ -32,7 +32,8 @@ npm run build
 ```
 
 ## Screenshot
-![Screenshot](http://h0.beicdn.com/open202021/f6a79f0be3b70c67_355x636.png)
+![Screenshot0](http://h0.beicdn.com/open202021/f6a79f0be3b70c67_355x636.png)
+![Screenshot1](http://h0.beicdn.com/open202021/3bf11dc0efbfb4ab_355x637.png)
 
 ### 有关打包优化
 第三方库单独打包
