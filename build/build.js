@@ -1,10 +1,3 @@
-/*
- * @Description: 
- * @Autor: shunfa.xu
- * @Date: 2020-05-21 15:55:54
- * @LastEditors: shunfa.xu
- * @LastEditTime: 2020-05-22 15:07:20
- */ 
 const webpack = require('webpack');
 const config = require('./webpack.prod.conf');
 
