@@ -4,9 +4,6 @@
           <router-link to="/index">index</router-link>
         </div>
         <div class="col4">
-          <router-link to="/news">news</router-link>
-        </div>
-        <div class="col4">
           <router-link to="/second">menu3</router-link>
         </div>
         <div class="col4">
@@ -33,7 +30,7 @@
         border-top: 1px solid #ccc;
         display: grid;
         text-align: center;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-columns: 33% 33% 33%;
     }
     .fixed-bottom a {
         width: 100%;

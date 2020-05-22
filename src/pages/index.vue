@@ -37,29 +37,32 @@ export default {
 
 <style>
 button {
-  display: block;
-  margin: 0 auto;
-  line-height: 30px;
-  border: 1px solid #ddd;
-  color: #41b883;
+	display: block;
+	margin: 0 auto;
+	line-height: 30px;
+	border: 1px solid #ddd;
+	color: #41b883;
 }
 a {
-  color: #35495e;
-  font-size: 16px;
+	color: #35495e;
+	font-size: 16px;
+	text-decoration: none;
 }
 ul {
-  margin-bottom: 60px;
+	margin-bottom: 60px;
 }
 li {
-  line-height: 32px;
-  border-bottom: 1px solid #ddd;
-  padding: 0 10px;
+	line-height: 32px;
+	border-bottom: 1px solid #ddd;
+	padding: 0 10px;
+	text-align: left;
+	list-style: none;
 }
 b {
-  font-size: 12px;
-  color: #35495e;
+	font-size: 12px;
+	color: #35495e;
 }
 .loading {
-  text-align: center;
+  	text-align: center;
 }
 </style>

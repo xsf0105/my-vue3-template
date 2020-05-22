@@ -6,7 +6,6 @@ Vue.config.debug = true
 Vue.use(VueRouter);
 
 import Index from '../pages/index'
-import News from '../pages/news'
 import SecondComponent from '../pages/otherPages'
 import ThirdComponent from '../pages/otherPages2'
 
@@ -17,10 +16,6 @@ export default new VueRouter({
 		{
 			path: '/index',
 			component: Index,
-		},
-		{
-			path: '/news',
-			component: News,
 		},
 		{
 			path: '/second',

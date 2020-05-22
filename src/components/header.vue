@@ -4,16 +4,13 @@
   </div>
 </template>
 <style>
-    body{
-        margin: 0;
-    }
     .header{
         width: 100%;
         margin: 0 auto;
     }
     .header img{
         width: 50%;
-        margin: 30px auto 0;
+		margin: 30px auto 30px;
         display: block;
     }
 </style>
