@@ -31,6 +31,9 @@ You should see a new browser tap opening and a page of 'index.html' in http://lo
 npm run build
 ```
 
+## Screenshot
+![Screenshot](http://h0.beicdn.com/open202021/f6a79f0be3b70c67_355x636.png)
+
 ### 有关打包优化
 第三方库单独打包
 ```
