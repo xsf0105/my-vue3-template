@@ -2,7 +2,7 @@
 
 # 可能是全网最干净的 `vue` 脚手架
 
-> A Vue.js project with axios/vue-router/webpack
+> A Vue.js project with `Webpack 4.x`
 
 - 所有第三方包都已更新到最新
 - 只提供骨架，没有多余代码，让你自己搭建，自己玩
