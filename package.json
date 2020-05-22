@@ -1,17 +1,9 @@
 {
-  "name": "vue2spa",
+  "name": "vue2-spa-tutorial",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "xsf <416175716@qq.com>",
-  "private": true,
-  "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
-  },
-  "dependencies": {
-    "axios": "^0.15.3",
-    "vue": "^2.1.0"
-  },
+  "description": "最干净的脚手架",
+  "main": "index.js",
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.26.3",
@@ -24,8 +16,23 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
-  }
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allan2coder/VUE2-SPA-Tutorial.git"
+  },
+  "keywords": [
+    "webpack4",
+    "vue2",
+    "vue3"
+  ],
+  "author": "Allan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allan2coder/VUE2-SPA-Tutorial/issues"
+  },
+  "homepage": "https://github.com/allan2coder/VUE2-SPA-Tutorial#readme"
 }
