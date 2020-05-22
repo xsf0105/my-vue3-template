@@ -5,7 +5,7 @@
 > A Vue.js project with `Webpack 4.x`
 
 - 所有第三方包都已更新到最新
-- 只提供骨架，没有多余代码，让你自己搭建，自己玩
+- 没有多余代码，让你自己搭建，自己玩
 
 ## Live Demo
 The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端，打开浏览器开发者工具并调到手机窗口浏览。注：该项目同时适合PC端)
