@@ -1,4 +1,6 @@
 # Vue2-SPA
+
+> 可能是全网最干净的 `vue` 仓库
 > A Vue.js project with axios/vue-router/webpack
 
 
@@ -103,29 +105,25 @@ const app = new Vue({
 // 现在，应用已经启动了！
 ```
 
-### 生产环境要注意的地方：
+### 有关打包优化
+第三方库单独打包
+```
+npm i autodll-webpack-plugin -D
+```
+webpack 配置：
+```
+new AutoDllPlugin({
+  inject: true, // will inject the DLL bundle to index.html
+  debug: true,
+  filename: '[name]_[hash].js',
+  path: './dll',
+  entry: {
+    vendor: ['vue', 'vue-router'] // webpack 会去 `node_modules` 去找
+  }
+})
+```
+每次打包，这个插件都会检查注册在 `entry` 中的第三方库。如果没有变化，插件就会使用缓存中的打包文件，减少了打包的时间，这时 Hash 也不会变化。
 
-> 1、生产环境下若项目不是放在服务器的根目录下会访问不到静态资源，此时，你只需要修改下config文件夹内index.js的build中的assetsPublicPath即可
-
-```
-before：
-assetsPublicPath: '/', 
-```
-```
-after:
-assetsPublicPath: '/wx/otherPath/static', 
-```
-
-> 2、在写静态资源的时候最好使用相对路径，如：
-
-```
-error:
-background: url(../assets/img/icon.png);
-```
-```
-right:
-background: url(./../assets/img/icon.png);
-```
 
 
 ## Other SPA(其他单页)

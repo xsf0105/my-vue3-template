@@ -31,11 +31,9 @@
         bottom: 0;
         z-index: 99;
         border-top: 1px solid #ccc;
-    }
-    .fixed-bottom div {
-        display: inline-block;
-        float: left;
+        display: grid;
         text-align: center;
+        grid-template-columns: 25% 25% 25% 25%;
     }
     .fixed-bottom a {
         width: 100%;

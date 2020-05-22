@@ -1,4 +1,3 @@
-/* 路由配置全写这里 */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
@@ -6,30 +5,30 @@ import VueRouter from 'vue-router'
 Vue.config.debug = true
 Vue.use(VueRouter);
 
-import Index from '../pages/index.vue'
-import News from '../pages/news.vue'
-import secondcomponent from '../pages/otherPages.vue'
-import thirdcomponent from '../pages/otherPages2.vue'
+import Index from '../pages/index'
+import News from '../pages/news'
+import SecondComponent from '../pages/otherPages'
+import ThirdComponent from '../pages/otherPages2'
 
 export default new VueRouter({
-  mode: 'history',
+  mode: 'hash', // 还有 history 等
   base: __dirname,
   routes: [
     {
-      path: '/index',
-      component: Index
+		path: '/index',
+		component: Index,
     },
     {
-      path: '/news',
-      component: News
+		path: '/news',
+		component: News,
     },
     {
-      path: '/second',
-      component: secondcomponent
+		path: '/second',
+		component: SecondComponent,
     },
     {
-      path: '/third',
-      component: thirdcomponent
+		path: '/third',
+		component: ThirdComponent,
     }
   ]
 })
