@@ -1,6 +1,7 @@
-# Vue2-SPA (全网最干净的 `vue` 脚手架!)
+# Vue2-SPA
 
-> 可能是全网最干净的 `vue` 脚手架
+# 可能是全网最干净的 `vue` 脚手架
+
 
 > A Vue.js project with axios/vue-router/webpack
 
