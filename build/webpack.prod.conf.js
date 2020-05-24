@@ -8,13 +8,7 @@ module.exports = merge(baseConfig, {
 	devtool: "source-map",
 	module: {
 		rules: [ // 自己拓展着玩呀
-			// {
-			// 	test: /\.css$/,
-			// 	use: [
-			// 	  'css-loader',
-			// 	  'postcss-loader',
-			// 	]
-			// },
+		
 		],
 	},
 	plugins: [

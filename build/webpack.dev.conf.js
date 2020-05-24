@@ -6,11 +6,8 @@ module.exports = merge(baseConfig, {
 	mode: "development",
 	devtool: "inline-source-map",
 	module: {
-		rules: [  // 自己拓展着玩呀
-			// {
-			// 	test: /\.css$/,
-			// 	use: ["vue-style-loader", "css-loader", "postcss-loader"],
-			// },
+		rules: [ // 自己拓展着玩呀
+		
 		],
 	},
 	devServer: {
