@@ -58,8 +58,8 @@ new AutoDllPlugin({
 
 
 
-## Other SPA(其他单页)
-- [React.js 2.x](https://github.com/allan2coder/React-SPA) :fire: :fire: :fire:
+## Other SPA
+- [React.js](https://github.com/allan2coder/React-SPA) :fire: :fire: :fire:
 
 
 ## License
