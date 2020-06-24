@@ -60,7 +60,7 @@ new AutoDllPlugin({
 
 ## Other SPA
 - [React.js](https://github.com/allan2coder/React-SPA) :fire: :fire: :fire:
-
+1
 
 ## License
 MIT
