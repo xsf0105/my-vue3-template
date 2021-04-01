@@ -1,4 +1,4 @@
-# Vue2-SPA
+# Vue3-Tutorial
 A Tutorial for Vue 3.
 
 ## How to use
