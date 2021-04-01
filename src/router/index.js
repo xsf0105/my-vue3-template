@@ -1,29 +1,23 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
 
-/* 开启debug模式 */
-Vue.config.debug = true
-Vue.use(VueRouter);
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+];
 
-import Index from '../pages/index'
-import SecondComponent from '../pages/otherPages'
-import ThirdComponent from '../pages/otherPages2'
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
-export default new VueRouter({
-	mode: 'hash', // 还有 history 等
-	base: __dirname,
-	routes: [
-		{
-			path: '/index',
-			component: Index,
-		},
-		{
-			path: '/second',
-			component: SecondComponent,
-		},
-		{
-			path: '/third',
-			component: ThirdComponent,
-		}
-	]
-})
+export default router;
