@@ -1,4 +1,4 @@
-# Vue2-SPA
+# Vue3-Tutorial
 > A Vue.js project with axios/vue-router/webpack
 
 
