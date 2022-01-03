@@ -23,10 +23,6 @@ You should see a new browser tap opening and a page of 'index.html' in http://lo
 npm run build
 ```
 
-## Online demo
-
-https://allan2coder.github.io/VUE3-Tutorial/
-
 ## Other SPA
 - [React.js](https://github.com/allan2coder/React-SPA) :fire: :fire: :fire:
 
