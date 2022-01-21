@@ -1,6 +1,12 @@
 # Vue3-Tutorial
 A Tutorial for Vue 3.
 
+-[x] Vue3
+-[x] vue-router
+-[x] Vite
+-[x] setup
+-[x] echarts
+
 ## How to use
 You should clone the repo and install the dependencies, and then npm start.That is all.
 
