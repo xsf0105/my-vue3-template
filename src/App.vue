@@ -1,21 +1,14 @@
 <template>
-  <router-link to="/">Page1</router-link> ｜ 
-  <router-link to="/page2">Page2</router-link>
-
-  <router-view />
+  <Suspense>
+    <template #default>
+      <router-view v-slot="{ Component, route }">
+        <keep-alive>
+          <component :is="Component" v-if="route.meta && route.meta.keepAlive" :key="route.meta.usePathKey ? route.fullPath : undefined" />
+        </keep-alive>
+        <component :is="Component" v-if="!(route.meta && route.meta.keepAlive)" :key="route.meta.usePathKey ? route.fullPath : undefined" />
+      </router-view>
+    </template>
+    <template #fallback> Loading... </template>
+  </Suspense>
 </template>
-
-<script setup>
-import { onBeforeMount } from 'vue'
-
-onBeforeMount(() => {
-  //set tmp token when setting isNeedLogin false
-})
-
-</script>
-
-<style>
-  a {
-    color: #42b983;
-  }
-</style>
+<script setup></script>
