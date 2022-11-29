@@ -1,7 +1,6 @@
 # vue3-h5-template
 
-基于 vue3 + vite + nut ui + sass + viewport 适配方案 +axios 封装，构建手机端模板脚手架
-
+基于 vue3 + vite + quark design + sass + viewport 适配方案 +axios 封装，构建手机端模板脚手架
 
 ### 启动项目
 
@@ -16,7 +15,6 @@ npm run dev
 - [√ vite](#)
 - [√ 配置多环境变量](#env)
 - [√ viewport 适配方案](#viewport)
-- [√ nutUI 组件按需加载](#nutUI)
 - [√ Pinia 状态管理](#Pinia)
 - [√ Vue-router4](#router)
 - [√ Axios 封装及接口管理](#axios)
@@ -73,87 +71,18 @@ module.exports = {
 };
 ```
 
-更多详细信息： [vant](https://youzan.github.io/vant/#/zh-CN/quickstart#jin-jie-yong-fa)
-
-**新手必看，老鸟跳过**
-
-很多小伙伴会问我，适配的问题, 因为我们使用的是 Vant UI，所以必须根据 Vant UI 375 的设计规范走，一般我们的设计会将 UI 图上传到蓝湖，我们就可以需要的尺寸了。下面就大搞普及一下 rem。
-
-我们知道 `1rem` 等于 `html` 根元素设定的 `font-size` 的 `px` 值。Vant UI 设置 `rootValue: 37.5` , 你可以看到在 iPhone 6 下看到 （ `1rem 等于 37.5px` ）：
-
-```html
-<html data-dpr="1" style="font-size: 37.5px;"> </html>
-```
-
-切换不同的机型，根元素可能会有不同的 `font-size` 。当你写 css px 样式时，会被程序换算成 `rem` 达到适配。
-
-因为我们用了 Vant 的组件，需要按照 `rootValue: 37.5` 来写样式。
-
-举个例子：设计给了你一张 750px \* 1334px 图片，在 iPhone6 上铺满屏幕, 其他机型适配。
-
-- 当`rootValue: 75` , 样式 `width: 750px;height: 1334px;` 图片会撑满 iPhone6 屏幕，这个时候切换其他机型，图片也会跟着撑满。
-- 当`rootValue: 37.5` 的时候，样式 `width: 375px;height: 667px;` 图片会撑满 iPhone6 屏幕。
-
-也就是 iphone 6 下 375px 宽度写 CSS。其他的你就可以根据你设计图，去写对应的样式就可以了。
-
-当然，想要撑满屏幕你可以使用 100%，这里只是举例说明。
-
-```html
-<img class="image" src="https://www.sunniejs.cn/static/weapp/logo.png" />
-
-<style>
-  /* rootValue: 75 */
-  .image {
-    width: 750px;
-    height: 1334px;
-  }
-
-  /* rootValue: 37.5 */
-  .image {
-    width: 375px;
-    height: 667px;
-  }
-</style>
-```
+更多详细信息： [quark](https://quark-design.hellobike.com/#/zh-CN/component/button)
 
 [▲ 回顶部](#top)
 
-### <span id="nutUI">✅ nutUI 组件按需加载 </span>
+### <span id="quarkd">✅ quarkd 组件按需加载 </span>
 
 Vite 构建工具，使用 vite-plugin-style-import 实现按需引入。
 
 #### 安装插件
 
 ```bash
-npm i vite-plugin-style-import -D
-```
-
-在 `vite.config.ts` 设置
-
-```javascript
- plugins: [
-     ...
-     createStyleImportPlugin({
-         resolves: [NutuiResolve()],
-     }),
-     ...
- ],
-```
-
-#### 使用组件
-
-项目在 `plugins/nutUI.ts` 下统一管理组件，用哪个引入哪个，无需在页面里重复引用
-
-```javascript
-// 按需全局引入nutUI组件
-import Vue from 'vue';
-import { Button, Cell, CellGroup } from '@nutui/nutui';
-export const nutUiComponents = [Button, Cell, CellGroup];
-
-// 在main.ts文件中引入
-nutUiComponents.forEach((item) => {
-  app.use(item);
-});
+npm i quarkd
 ```
 
 [▲ 回顶部](#top)
@@ -228,7 +157,7 @@ export default router;
 ```javascript
 import axios from 'axios';
 import store from '@/store';
-import { Toast } from 'vant';
+import Toast from 'quarkd/lib/toast';
 // 根据环境不同引入不同api地址
 import { baseApi } from '@/config';
 // create an axios instance
@@ -244,9 +173,7 @@ service.interceptors.request.use(
     // 不传递默认开启loading
     if (!config.hideloading) {
       // loading
-      Toast.loading({
-        forbidClick: true,
-      });
+      Toast.loading('loading');
     }
     if (store.getters.token) {
       config.headers['X-Token'] = '';
@@ -352,9 +279,6 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
     plugins: [
       vue(),
       vueJsx(),
-      createStyleImportPlugin({
-        resolves: [NutuiResolve()],
-      }),
       eruda(),
       viteMockServe({
         mockPath: './src/mock',
@@ -362,14 +286,6 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
         logger: true,
       }),
     ],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          // 配置 nutui 全局 scss 变量
-          additionalData: `@import "@nutui/nutui/dist/styles/variables.scss";`,
-        },
-      },
-    },
   };
 }
 ```
