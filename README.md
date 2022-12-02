@@ -77,7 +77,7 @@ module.exports = {
 
 ### <span id="quarkd">✅ quarkd 组件按需加载 </span>
 
-Vite 构建工具，使用 vite-plugin-style-import 实现按需引入。
+https://quark-design.hellobike.com/#/
 
 #### 安装插件
 
