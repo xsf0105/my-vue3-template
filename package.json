@@ -20,7 +20,7 @@
     "@vueuse/integrations": "8.7.5",
     "axios": "0.27.2",
     "pinia": "^2.0.14",
-    "quarkd": "^1.0.25",
+    "quarkd": "^1.0.49",
     "universal-cookie": "^4.0.4",
     "vue": "^3.2.36",
     "vue-i18n": "^9.1.10",
