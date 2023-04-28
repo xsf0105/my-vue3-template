@@ -6,11 +6,12 @@
       </keep-alive>
     </router-view>
   </div>
-  <nut-tabbar unactive-color="#364636" active-color="#1989fa" @tab-switch="tabSwitch">
-    <nut-tabbar-item :tab-title="$t('tabbar.home')" font-class-name="iconfont" class-prefix="icon" icon="home" />
-    <nut-tabbar-item :tab-title="$t('tabbar.list')" font-class-name="iconfont" class-prefix="icon" icon="list" />
-    <nut-tabbar-item :tab-title="$t('tabbar.member')" font-class-name="iconfont" class-prefix="icon" icon="member" />
-  </nut-tabbar>
+
+  <quark-tabbar @change="tabSwitch">
+    <quark-tabbar-item>{{$t('tabbar.home')}}</quark-tabbar-item>
+    <quark-tabbar-item>{{$t('tabbar.list')}}</quark-tabbar-item>
+    <quark-tabbar-item>{{$t('tabbar.member')}}</quark-tabbar-item>
+  </quark-tabbar>
 </template>
 
 <script lang="ts" setup>
@@ -18,9 +19,8 @@
 
   const router = useRouter();
 
-  const tabSwitch = (item, index) => {
-    console.log(item, index);
-    switch (index) {
+  const tabSwitch = (item) => {
+    switch (+item.detail.value) {
       case 0:
         router.push('/home');
         break;

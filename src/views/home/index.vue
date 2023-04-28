@@ -1,22 +1,12 @@
 <template>
-  <nut-navbar :left-show="false" :title="$t('tabbar.home')" />
   <p class="intro-header">{{ $t('introduction') }}</p>
-  <nut-cell-group :title="$t('home.support')" class="supportList">
-    <nut-cell title="Vue3" icon="Check" />
-    <nut-cell title="Vue-router" icon="Check" />
-    <nut-cell title="Axios" icon="Check" />
-    <nut-cell title="Pinia" icon="Check" />
-    <nut-cell title="NutUI" icon="Check" />
-    <nut-cell title="Vue-i18n" icon="Check" />
-    <nut-cell title="Jsx" icon="Check" />
-  </nut-cell-group>
   <div class="btn-wrap">
-    <nut-button shape="square" size="small" type="default" @click="changeLang('zh-cn')">
+    <quark-button shape="square" size="small" type="primary" @click="changeLang('zh-cn')">
       {{ $t('language.zh') }}
-    </nut-button>
-    <nut-button shape="square" size="small" type="default" @click="changeLang('en-us')">
+    </quark-button>
+    <quark-button shape="square" size="small" type="primary" @click="changeLang('en-us')">
       {{ $t('language.en') }}
-    </nut-button>
+    </quark-button>
   </div>
   {{ getUserInfo }}
 </template>
@@ -25,6 +15,7 @@
   import { computed } from 'vue';
   import { useUserStore } from '/@/store/modules/user';
   import { setLang } from '/@/i18n';
+  import 'quarkd/lib/button';
 
   const userStore = useUserStore();
   const getUserInfo = computed(() => {
