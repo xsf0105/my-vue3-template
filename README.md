@@ -1,12 +1,11 @@
 # vue3-h5-template
 
-基于 vue3 + vite + quark design + sass + viewport 适配方案 +axios 封装，构建手机端模板脚手架
+基于 vue3 + vite + Pinia + quark design + sass + viewport 适配方案 +axios 封装，构建手机端模板脚手架
 
 ### 启动项目
 
 ```bash
 npm install
-
 npm run dev
 ```
 
