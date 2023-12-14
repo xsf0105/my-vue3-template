@@ -16,14 +16,12 @@
     "deps": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@nutui/nutui": "^4.0.6",
     "@vueuse/core": "8.7.5",
     "@vueuse/integrations": "8.7.5",
     "axios": "0.27.2",
     "pinia": "^2.0.14",
     "quarkd": "^1.0.57",
     "universal-cookie": "^4.0.4",
-    "vant": "^4.2.0",
     "vue": "^3.2.36",
     "vue-i18n": "^9.1.10",
     "vue-router": "^4.0.16"
