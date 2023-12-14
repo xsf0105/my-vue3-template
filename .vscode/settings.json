@@ -1,4 +1,19 @@
 {
-  "i18n-ally.localesPaths": ["src/i18n", "src/i18n/lang"],
-  "cSpell.words": ["consola", "eruda", "mockjs", "nutui", "pinia", "stylelint", "vant", "vite", "vitejs", "vueuse"]
+	"editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "eslint.options": {
+    // "configFile": "./eslintrc.js",
+    "rules": {
+      "no-restricted-syntax": "off"
+    }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+    "html",
+    "typescript",
+    "typescriptreact"
+  ]
 }

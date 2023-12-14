@@ -12,6 +12,7 @@ const pathResolve = (dir: string) => {
 export default function ({ command }: ConfigEnv): UserConfigExport {
   const isProduction = command === 'build';
   const root = process.cwd();
+
   return {
     root,
     resolve: {
@@ -20,15 +21,9 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
           find: 'vue-i18n',
           replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
         },
-        // /@/xxxx => src/xxxx
         {
           find: /\/@\//,
           replacement: pathResolve('src') + '/',
-        },
-        // /#/xxxx => types/xxxx
-        {
-          find: /\/#\//,
-          replacement: pathResolve('types') + '/',
         },
       ],
     },
@@ -37,13 +32,5 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
       hmr: true,
     },
     plugins: createVitePlugins(isProduction),
-    css: {
-      preprocessorOptions: {
-        scss: {
-          // 配置 nutui 全局 scss 变量
-          additionalData: `@import "@nutui/nutui/dist/styles/variables.scss";`,
-        },
-      },
-    },
   };
 }

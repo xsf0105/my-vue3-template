@@ -14,7 +14,7 @@ import { ConfigCompressPlugin } from './compress';
 import { ConfigPagesPlugin } from './pages';
 import { ConfigRestartPlugin } from './restart';
 import { ConfigProgressPlugin } from './progress';
-import { ConfigEruda } from './eruda';
+// import { ConfigEruda } from './eruda';
 import { ConfigStyleImport } from './styleImport';
 import { ConfigImageminPlugin } from './imagemin';
 import { ConfigVisualizerConfig } from './visualizer';
@@ -51,7 +51,7 @@ export function createVitePlugins(isBuild: boolean) {
   vitePlugins.push(ConfigStyleImport());
 
   // eruda
-  vitePlugins.push(ConfigEruda());
+  // vitePlugins.push(ConfigEruda());
 
   // rollup-plugin-visualizer
   vitePlugins.push(ConfigVisualizerConfig());

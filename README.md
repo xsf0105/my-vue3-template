@@ -1,6 +1,6 @@
 # vue3-h5-template
 
-基于 vue3 + vite + Pinia + quark design + sass + viewport 适配方案 +axios 封装，构建手机端模板脚手架
+基于 vue3 + vite + Pinia + quark design + sass + viewport 适配方案 + axios 封装，构建手机端模板脚手架
 
 ### 启动项目
 
@@ -20,7 +20,7 @@ npm run dev
 - [√ vite.config.ts 基础配置](#base)
 - [√ alias](#alias)
 - [√ proxy 跨域](#proxy)
-- [√ Eslint+Pettier+stylelint 统一开发规范 ](#lint)
+- [√ Eslint + Pettier + stylelint 统一开发规范 ](#lint)
 
 ### <span id="env">✅ 配置多环境变量 </span>
 
@@ -278,7 +278,6 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
     plugins: [
       vue(),
       vueJsx(),
-      eruda(),
       viteMockServe({
         mockPath: './src/mock',
         localEnabled: command === 'serve',

@@ -26,6 +26,7 @@
     setLang(type);
   };
 </script>
+
 <style lang="scss">
   .header {
     display: flex;
