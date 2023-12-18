@@ -1,4 +1,4 @@
-# vue3-h5-template
+# vue3-template
 
 基于 vue3 + vite + Pinia + quark design + sass + viewport 适配方案 + axios 封装，构建手机端模板脚手架
 
