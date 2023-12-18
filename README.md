@@ -70,13 +70,13 @@ module.exports = {
 };
 ```
 
-更多详细信息： [quark](https://quark-design.hellobike.com/#/zh-CN/component/button)
+更多详细信息： [quarkd](https://vue-quarkd.hellobike.com/#/zh-CN/component/button)
 
 [▲ 回顶部](#top)
 
 ### <span id="quarkd">✅ quarkd 组件按需加载 </span>
 
-https://quark-design.hellobike.com/#/
+https://vue-quarkd.hellobike.com/#/
 
 #### 安装插件
 
@@ -104,6 +104,7 @@ npm i quarkd
 ```html
 <script lang="ts" setup>
   import { useUserStore } from '@/store/modules/user';
+
   const userStore = useUserStore();
   userStore.login();
 </script>
@@ -124,6 +125,7 @@ import Vue from 'vue';
 import { createRouter, createWebHistory, Router } from 'vue-router';
 
 Vue.use(Router);
+
 export const router = [
   {
     name: 'root',
@@ -159,6 +161,7 @@ import store from '@/store';
 import Toast from 'quarkd/lib/toast';
 // 根据环境不同引入不同api地址
 import { baseApi } from '@/config';
+
 // create an axios instance
 const service = axios.create({
   baseURL: baseApi, // url = base api url + request url

@@ -8,7 +8,7 @@ export const lang = {
     en: '英文',
     zh: '中文',
   },
-  introduction: '一个快速开发vue3的移动端模板',
+  introduction: '一个快速开发vue3的前端模板，Web、h5都适用',
   home: {
     support: '支持',
   },
