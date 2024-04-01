@@ -70,13 +70,13 @@ module.exports = {
 };
 ```
 
-更多详细信息： [quarkd](https://vue-quarkd.hellobike.com/#/zh-CN/component/button)
+更多详细信息： [quarkd](https://quark-ecosystem.github.io/quarkd-docs/)
 
 [▲ 回顶部](#top)
 
 ### <span id="quarkd">✅ quarkd 组件按需加载 </span>
 
-https://vue-quarkd.hellobike.com/#/
+[https://quark-ecosystem.github.io/quarkd-docs](https://quark-ecosystem.github.io/quarkd-docs/)
 
 #### 安装插件
 
