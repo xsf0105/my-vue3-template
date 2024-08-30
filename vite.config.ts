@@ -1,6 +1,7 @@
 import { createVitePlugins } from './config/vite/plugins';
 import { resolve } from 'path';
 import { ConfigEnv, UserConfigExport } from 'vite';
+import inspector from 'vite-plugin-dev-inspector'
 
 // import { viteMockServe } from 'vite-plugin-mock';
 
@@ -31,6 +32,11 @@ export default function ({ command }: ConfigEnv): UserConfigExport {
       host: true,
       hmr: true,
     },
-    plugins: createVitePlugins(isProduction),
+    plugins: [
+      createVitePlugins(isProduction),
+      inspector({
+        toggleButtonVisibility: 'never',
+      }),
+    ],
   };
 }
