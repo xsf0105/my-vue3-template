@@ -1,3 +1,11 @@
 {
-  "recommendations": ["johnsoncodehk.volar"]
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "vue.volar",
+    "antfu.unocss",
+    "vitest.explorer",
+    "wiensss.region-highlighter"
+  ]
 }

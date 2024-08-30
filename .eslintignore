@@ -1,15 +1,8 @@
+# Eslint 会忽略的文件
 
-*.sh
+.DS_Store
 node_modules
-*.md
-*.woff
-*.ttf
-.vscode
-.idea
 dist
-/public
-/docs
-.husky
-.local
-/bin
-Dockerfile
+dist-ssr
+*.local
+.npmrc

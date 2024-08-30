@@ -1,112 +1,93 @@
 {
-  "name": "vue-h5-template",
-  "version": "1.0.0",
+  "name": "my-vue3-vite-template",
+  "description": "一个免费开源的中后台管理系统基础解决方案，基于 Vue3、TypeScript、Element Plus、Pinia 和 Vite 等主流技术",
+  "type": "module",
   "scripts": {
-    "dev": "vite --open",
-    "dev:test": "vite --mode test",
-    "dev:prod": "vite --mode production",
-    "build": "vue-tsc --noEmit && vite build",
-    "report": "cross-env REPORT=true npm run build",
-    "preview": "vite preview",
-    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
-    "lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint:lint-staged": "lint-staged",
-    "prepare": "husky install",
-    "deps": "yarn upgrade-interactive --latest"
+    "dev": "vite",
+    "build:stage": "vue-tsc --noEmit && vite build --mode staging",
+    "build:prod": "vue-tsc --noEmit && vite build",
+    "preview:stage": "pnpm build:stage && vite preview",
+    "preview:prod": "pnpm build:prod && vite preview",
+    "lint:eslint": "eslint --cache --max-warnings 0 \"{src,tests,types}/**/*.{vue,js,jsx,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write \"{src,tests,types}/**/*.{vue,js,jsx,ts,tsx,json,css,less,scss,html,md}\"",
+    "lint": "pnpm lint:eslint && pnpm lint:prettier",
+    "prepare": "husky",
+    "test": "vitest"
   },
   "dependencies": {
-    "@vueuse/core": "8.7.5",
-    "@vueuse/integrations": "8.7.5",
-    "axios": "0.27.2",
-    "pinia": "^2.0.14",
-    "quarkd": "^1.0.57",
-    "universal-cookie": "^4.0.4",
-    "vue": "^3.2.36",
-    "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.16"
+    "@element-plus/icons-vue": "2.3.1",
+    "axios": "1.7.5",
+    "dayjs": "1.11.13",
+    "element-plus": "2.8.1",
+    "js-cookie": "3.0.5",
+    "lodash-es": "4.17.21",
+    "mitt": "3.0.1",
+    "normalize.css": "8.0.1",
+    "nprogress": "0.2.0",
+    "path-browserify": "1.0.1",
+    "path-to-regexp": "7.1.0",
+    "pinia": "2.2.2",
+    "screenfull": "6.0.2",
+    "vue": "3.4.38",
+    "vue-router": "4.4.3",
+    "vxe-table": "4.6.18",
+    "vxe-table-plugin-element": "4.0.4",
+    "xe-utils": "3.5.30"
   },
   "devDependencies": {
-    "@types/node": "^17.0.42",
-    "@typescript-eslint/eslint-plugin": "^5.29.0",
-    "@typescript-eslint/parser": "^5.29.0",
-    "@vitejs/plugin-legacy": "^1.8.2",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "@vitejs/plugin-vue-jsx": "^1.3.10",
-    "consola": "^2.15.3",
-    "cross-env": "^7.0.3",
-    "eruda": "^2.4.1",
-    "eslint": "^8.18.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^9.1.1",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
-    "mockjs": "^1.1.0",
-    "postcss": "^8.4.14",
-    "postcss-html": "1.4.1",
-    "postcss-less": "^6.0.0",
-    "postcss-px-to-viewport-8-plugin": "^1.1.3",
-    "prettier": "^2.7.1",
-    "rollup-plugin-visualizer": "^5.6.0",
-    "sass": "^1.69.5",
-    "scss": "^0.2.4",
-    "stylelint": "^14.9.1",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended": "^8.0.0",
-    "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^26.0.0",
-    "stylelint-order": "^5.0.0",
-    "typescript": "^4.7.4",
-    "unplugin-auto-import": "^0.9.1",
-    "unplugin-vue-components": "^0.19.9",
-    "vite": "^2.9.12",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-dev-inspector": "^2.2.4",
-    "vite-plugin-eruda": "^1.0.1",
-    "vite-plugin-imagemin": "^0.6.1",
-    "vite-plugin-mock": "^2.9.6",
-    "vite-plugin-pages": "^0.24.2",
-    "vite-plugin-progress": "^0.0.3",
-    "vite-plugin-restart": "^0.1.1",
-    "vite-plugin-style-import": "^2.0.0",
-    "vite-plugin-svg-icons": "^2.0.1",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vue-eslint-parser": "^9.0.3",
-    "vue-tsc": "^0.38.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "resolutions": {
-    "bin-wrapper": "npm:bin-wrapper-china",
-    "rollup": "^2.56.3",
-    "gifsicle": "5.2.0"
+    "@types/js-cookie": "3.0.6",
+    "@types/lodash-es": "4.17.12",
+    "@types/node": "22.5.0",
+    "@types/nprogress": "0.2.3",
+    "@types/path-browserify": "1.0.3",
+    "@typescript-eslint/eslint-plugin": "8.2.0",
+    "@typescript-eslint/parser": "8.2.0",
+    "@vitejs/plugin-vue": "5.1.2",
+    "@vitejs/plugin-vue-jsx": "4.0.1",
+    "@vue/eslint-config-prettier": "9.0.0",
+    "@vue/eslint-config-typescript": "13.0.0",
+    "@vue/test-utils": "2.4.6",
+    "eslint": "8.57.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-vue": "9.27.0",
+    "husky": "9.1.5",
+    "jsdom": "24.1.1",
+    "lint-staged": "15.2.9",
+    "prettier": "3.3.3",
+    "sass": "1.77.8",
+    "typescript": "5.5.4",
+    "unocss": "0.62.2",
+    "vite": "5.4.2",
+    "vite-plugin-svg-icons": "2.0.1",
+    "vite-svg-loader": "5.1.0",
+    "vitest": "2.0.5",
+    "vue-eslint-parser": "9.4.3",
+    "vue-tsc": "2.0.29"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{vue,js,jsx,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ],
-    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
-      "prettier --write--parser json"
+    "*.{css,less,scss,html,md}": [
+      "prettier --write"
     ],
     "package.json": [
       "prettier --write"
-    ],
-    "*.vue": [
-      "eslint --fix",
-      "prettier --write",
-      "stylelint --fix"
-    ],
-    "*.{scss,less,styl,html}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.md": [
-      "prettier --write"
     ]
-  }
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "admin",
+    "vue-admin",
+    "vue3-admin",
+    "vite",
+    "vite-admin",
+    "element-plus",
+    "element-plus-admin",
+    "ts",
+    "typescript"
+  ],
+  "license": "MIT"
 }

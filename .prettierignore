@@ -1,9 +1,8 @@
-/dist/*
-.local
-.output.js
-/node_modules/**
+# Prettier 会忽略的文件
 
-**/*.svg
-**/*.sh
-
-/public/*
+.DS_Store
+node_modules
+dist
+dist-ssr
+*.local
+.npmrc
