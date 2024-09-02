@@ -7,6 +7,8 @@ import vueJsx from "@vitejs/plugin-vue-jsx"
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons"
 import svgLoader from "vite-svg-loader"
 import UnoCSS from "unocss/vite"
+import inspector from 'vite-plugin-dev-inspector'
+
 
 /** 配置项文档：https://cn.vitejs.dev/config */
 export default ({ mode }: ConfigEnv): UserConfigExport => {
@@ -84,6 +86,9 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
     plugins: [
       vue(),
       vueJsx(),
+      inspector({
+        toggleButtonVisibility: 'always',
+      }),
       /** 将 SVG 静态图转化为 Vue 组件 */
       svgLoader({ defaultImport: "url" }),
       /** SVG */
